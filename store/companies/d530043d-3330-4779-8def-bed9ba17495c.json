@@ -1,3 +1,8 @@
 {
-  "name": "Polt Design"
+  "name": "Polt Design",
+  "email": "test@email.com",
+  "phone_number": "555-555-5555",
+  "city": "New York",
+  "state": "NY",
+  "company_type": "factory"
 }
