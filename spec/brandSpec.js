@@ -44,13 +44,7 @@ describe('Brands', () => {
     it('creates a new brand', done => {
         request(app)
             .post('/brands')
-            .send({ name: 'Test Brand',
-            email: "test@email.com",
-            phone_number: "555-555-5555",
-            city: "New York",
-            state: "NY",
-            company_type: "brand"
-          })
+            .send(testBrand)
             .expect(200)
             .end((err, res) => {
                 if (err) return done.fail(err);
