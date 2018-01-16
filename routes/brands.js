@@ -26,7 +26,7 @@ router.get('/search', (req, res) => {
         let result = companies.find((company) =>{ // iterate through the array of companies
            return (isBrand(company) && company.name.includes(searchQuery)) // check to see if company is a brand and name includes the string from the search query
         });
-        result ? res.json(result) : res.sendStatus(404); // return the resulting object as json for some yummy api consumption and 404 if not found.
+        result ? res.json(result) : res.json({ message: 'No data matches your query.' }); // return the resulting object as json for some yummy api consumption and null set if not found.
     });
 });
 
